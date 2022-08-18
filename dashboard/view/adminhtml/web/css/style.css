@@ -1,0 +1,53 @@
+/**
+ * Copyright (c) 2019 Magenerds
+ * All rights reserved
+ *
+ * This product includes proprietary software developed at Magenerds, Germany
+ * For more information see http://www.magenerds.com/
+ *
+ * To obtain a valid license for using this software please contact us at
+ * info@magenerds.com
+ */
+
+/**
+ * @copyright  Copyright (c) 2019 Magenerds (http://www.magenerds.com)
+ * @link       http://www.magenerds.com/
+ * @author     Florian Sydekum <info@magenerds.com>
+ */
+.dashboard-container {
+  line-height: 30px;
+  font-size: 16px;
+  padding-bottom: 50px;
+}
+
+.dashboard-item-title {
+  font-size: 22px;
+}
+
+.text {
+  padding-right: 20px;
+}
+
+.buttons {
+  padding-bottom: 20px;
+}
+
+.badges {
+  padding-top: 20px;
+}
+
+.magenerds-logo {
+  width: 400px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.blog li {
+  padding-bottom: 20px;
+}
+
+.title {
+  font-weight: 600;
+}

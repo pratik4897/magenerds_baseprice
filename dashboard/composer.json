@@ -1,0 +1,19 @@
+{
+    "name": "magenerds/dashboard",
+    "description": "The Magenerds dashboard provides useful information about Magenerds",
+    "require": {
+        "magento/framework": "*"
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magenerds\\Dashboard\\": ""
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2019 Magenerds
+ * All rights reserved
+ *
+ * This product includes proprietary software developed at Magenerds, Germany
+ * For more information see http://www.magenerds.com/
+ *
+ * To obtain a valid license for using this software please contact us at
+ * info@magenerds.com
+ */
+
+/**
+ * @copyright  Copyright (c) 2019 Magenerds (http://www.magenerds.com)
+ * @link       http://www.magenerds.com/
+ * @author     Florian Sydekum <info@magenerds.com>
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magenerds_Dashboard::css/menu.css"/>
+    </head>
+</page>

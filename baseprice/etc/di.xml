@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ */
+
+/**
+ * @category   Magenerds
+ * @package    Magenerds_BasePrice
+ * @subpackage etc
+ * @author     Florian Sydekum <f.sydekum@techdivision.com>
+ * @copyright  Copyright (c) 2019 TechDivision GmbH (https://www.techdivision.com)
+ * @link       https://www.techdivision.com/
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Pricing\Render">
+        <plugin name="magenerds_baseprice_priceRender" type="Magenerds\BasePrice\Model\Plugin\AfterPrice" />
+    </type>
+    <type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin name="magenerds_baseprice_configurablePriceRender" type="Magenerds\BasePrice\Model\Plugin\ConfigurablePrice" />
+    </type>
+    <type name="Magento\Checkout\Model\DefaultConfigProvider">
+        <plugin name="AddAttPlug" type="Magenerds\BasePrice\Model\Plugin\ConfigProviderPlugin" />
+    </type>
+    <type name="Magento\Checkout\CustomerData\DefaultItem">
+        <plugin name="AddAttPlug" type="Magenerds\BasePrice\Model\Plugin\DefaultItem" disabled="false" sortOrder="10"/>
+    </type>
+    <preference for="Magento\GroupedProduct\Model\Product\Type\Grouped" type="Magenerds\BasePrice\Model\Plugin\Grouped"/>
+</config>

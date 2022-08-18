@@ -1,0 +1,108 @@
+<?php
+/**
+ * Copyright (c) 2019 Magenerds
+ * All rights reserved
+ *
+ * This product includes proprietary software developed at Magenerds, Germany
+ * For more information see http://www.magenerds.com/
+ *
+ * To obtain a valid license for using this software please contact us at
+ * info@magenerds.com
+ */
+
+/**
+ * @copyright  Copyright (c) 2019 Magenerds (http://www.magenerds.com)
+ * @link       http://www.magenerds.com/
+ * @author     Florian Sydekum <info@magenerds.com>
+ */
+
+/**
+ * @var $block \Magenerds\Dashboard\Block\Adminhtml\Dashboard
+ */
+?>
+<div class="dashboard-container row">
+    <div class="ol-m-12s">
+        <div class="col-m-4 text">
+            <div class="intro">
+                After nine years of development experience with Magento&reg;, both a Magento&reg; Gold Partner and a
+                Magento&reg; 2 Trained Solution Partner, we are now offering high quality extensions for Magento&reg; 2.
+                Our dedicated team builds smart and awesome extensions which broaden your Magento&reg; 2 store, thus
+                increasing sales and usability. Many extensions are free to download. We also host a Magento&reg; 2
+                <a href="http://www.magenerds.com/blog/" target="_blank">developer blog</a> where we describe our daily
+                business and insights to our technologies. If you are a Magenerd like us, you should definitely check it
+                out!
+            </div>
+            <div class="badges">
+                <div>Our team's certifications:</div>
+                <img src="<?php echo $block->getViewFileUrl('Magenerds_Dashboard::images/m2-trained-badge.png'); ?>" alt="Magento 2 Trained Solution Partner"/>
+                <img src="<?php echo $block->getViewFileUrl('Magenerds_Dashboard::images/badge-cert-solution.png'); ?>" alt="Magento Certified Solution Specialist"/>
+                <img src="<?php echo $block->getViewFileUrl('Magenerds_Dashboard::images/badge-cert-dev-plus.png'); ?>" alt="Magento Certified Developer Plus"/>
+                <img src="<?php echo $block->getViewFileUrl('Magenerds_Dashboard::images/badge-cert-front.png'); ?>" alt="Magento Certified Frontend Developer"/>
+            </div>
+        </div>
+        <div class="col-m-4 text">
+            <div class="dashboard-item-title">Support and Contact</div>
+            <div>
+                We are happy that you use one of our extensions. We do our best to build extensions with high quality.
+                As an experienced Magento solution partner we know how to build extensions which do not break your
+                store.
+                Nevertheless problems and bugs can occur at any time and we would be glad if you help us increasing the
+                extensions' quality by reporting them to us. Also if you have any questions or need help contact us.
+            </div>
+            <div>
+                You can have a look at our <a href="http://doc.magenerds.com/" target="_blank">documentation
+                    platform</a>,
+                offering answers to several common questions. We also have an
+                <a href="http://doc.magenerds.com/extension-installation/" target="_blank">installation guide</a>
+                for general extension installation. If your question or problem is still not solved you can contact us
+                at any time. Please use our <a href="http://www.magenerds.com/report-a-bug/" target="_blank">bug report
+                    form</a>
+                to for contacting us. We only support cases issued via our bug report form.
+            </div>
+            <div class="buttons">
+                <button class="action-primary" title="Get support" id="support" onclick="setLocation('http://www.magenerds.com/report-a-bug/')">
+                    <span>Get support</span>
+                </button>
+                <button class="action-primary" title="Documentation" id="documentation" onclick="setLocation('http://doc.magenerds.com/')">
+                    <span>Documentation</span>
+                </button>
+                <button class="action-primary" title="Website" id="website" onclick="setLocation('http://www.magenerds.com')">
+                    <span>Visit our website</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-m-4">
+            <img class="magenerds-logo" src="<?php echo $block->getViewFileUrl('Magenerds_Dashboard::images/magenerds-logo.png'); ?>" alt="Magento 2 Trained Solution Partner"/>
+        </div>
+    </div>
+</div>
+<div class="dashboard-container row">
+    <div class="col-m-12">
+        <div class="col-m-4 blog text">
+            <div class="dashboard-item-title">Latest blog posts</div>
+            <ul>
+                <?php foreach ($block->getBlogFeeds() as $feed): ?>
+                    <li>
+                        <div class="title">
+                            <a href="<?php echo $feed['link'] ?>" target="_blank"><?php echo $feed['title'] ?></a>
+                            (<?php echo $feed['date']; ?>)
+                        </div>
+                        <div class="description"><?php echo $feed['description'] ?>...
+                            <a href="<?php echo $feed['link'] ?>" target="_blank">(read more)</a></div>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="col-m-8 blog">
+            <div class="dashboard-item-title">Latest Magenerds news</div>
+            <ul>
+                <?php foreach ($block->getNewsFeeds() as $feed): ?>
+                    <li>
+                        <div class="title"><?php echo $feed['title'] ?></div>
+                        <div class="content"><?php echo $feed['content'] ?></div>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+</div>
